@@ -1,0 +1,5 @@
+¿En qué consiste el patrón de diseño Repository?
+Consiste en que es una manera de organizar la data de nuestra aplicación, pues en este podremos tener la capa de datos, mandarlas al view model para que esta pueda hacer uso de ella, mostrandola al ui del usuario. El repository es responsable de Exponer datos, centralizar los cambios a los datos, contener lógica empresarial. Su ventaja es poder intercambiar los detalles de implementación y migración de datos.
+
+¿Qué es el ViewModel?
+Es la lógica empresiaral, mediante la cual podremos exponer el estado del ui al usuario. Podremos almacenar la data en una cache. Trabaja mediante capas de datos (Model) y la capa de interfaz de usuario (View). Uno de sus beneficios es, conservar el estado de la UI. Posee ciclos de vida, divididos por casos, ya sea un actividad, fragmento o navigation.
