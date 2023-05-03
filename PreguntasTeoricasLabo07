@@ -1,0 +1,18 @@
+1- ¿Qué ventajas tiene el utilizar LiveData?
+-Podemos obtener información de manera real al momento de hacer uso de nuestra aplicación, haciendo que coincidala ui con el estado de los datos
+-Los datos evitan quedar en inactivo, pues se pasan reciclando los datos percibiendo los datos más recientes dentro de nuestro flujo.
+-Cambios de configuración apropiados, donde si a una actividad o fragmento se vuelve a crear o modificar, este recibe de manera inmediatamente los cambios recientes.
+
+2- ¿Qué patrón de diseño utiliza LiveData?
+-MVVM
+
+3- Menciona que se debe agregar al Gradle para poder implementar
+Se debe de agregar la siguiente sintaxis dentro del gradle de (Module:app)
+dataBinding {
+        enabled true
+    }
+    
+4- ¿Qué es DataBinding? Menciona sus ventajas frente a findViewById    
+En el findview by id, se necesita de saber exactamente las rutas mandandolas a llamar exactamente por el id, mientras Databinding solo necesita hacer uso de jerarquia para poder comunicarse entre si.
+Al hacer uso de Databinding nos evitames el uso de punteros nulos, los cuales son utilizados por findVIewById
+Se realiza menos código al utilizar live data. 
