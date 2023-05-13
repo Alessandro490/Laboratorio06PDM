@@ -1,0 +1,12 @@
+PreguntasTeoricas Labo08
+¿Cuál es la principal ventaja de utilizar Recycler View?
+-Una de sus caracteristicas es el hecho de poder deslizar hacia abajo para poder actualizar el material. 
+-Hace uso de Patrón ViewHolder, donde se puede apreciar que es lo contendra nuestro recyclerView para posteriormente ser adaptado, reciclando automaticamente la bista
+-Podemos configurar la distribución de vistas en diferentes configuraciones 
+-La interacción mediante la selección que puede llegar a tener el usuario  
+
+Menciona los componentes de RecyclerView y la función que tiene cada uno de ellos
+Item list: su función es poder tener un diseño definido en la estructura visual con los elementos del mismo, con la vista de cada uno de los elementos que se tendran en el recyclerview, haciendo viable su reutilización
+View holder: En lugar de crear una nueva vista cada vez que se muestra un elemento, se reutiliza la vista del elemento anterior que ya no es visible, permitiendo mandarlo a llamar cada vez que se desee cambiar el elemento.
+Adapter: proporciona una manera eficiente de crear y reutilizar las vistas que se muestran en pantalla al tiempo que se asegura de que los datos se muestran en el orden y cantidad correctos.
+

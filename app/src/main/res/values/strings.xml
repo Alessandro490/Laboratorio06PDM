@@ -16,4 +16,6 @@
     <string name="descriptionHint">Description</string>
     <string name="calificationHint">Calification</string>
     <string name="submitButtonText">Submit</string>
+    <string name="movie_item_title_text_view">Star Wars episodio 3: La venganza de los sith</string>
+    <string name="movie_item_quaification_text_view">9.8</string>
 </resources>

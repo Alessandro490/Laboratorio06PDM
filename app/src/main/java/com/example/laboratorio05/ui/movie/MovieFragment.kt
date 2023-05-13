@@ -5,10 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.laboratorio05.R
+import com.example.laboratorio05.data.models.MovieModel
 import com.example.laboratorio05.databinding.FragmentMovieBinding
+import com.example.laboratorio05.ui.movie.billboard.recyclerview.MovieRecyclerViewAdapter
+import com.example.laboratorio05.ui.movie.viewmodel.MovieViewModel
 
 class MovieFragment : Fragment() {
+
+    private val movieViewModel: MovieViewModel by activityViewModels {
+        MovieViewModel.Factory
+    }
 
     private lateinit var binding : FragmentMovieBinding
 
@@ -18,7 +29,15 @@ class MovieFragment : Fragment() {
     ): View {
         binding = FragmentMovieBinding.inflate(inflater, container, false)
         return binding.root
-     //return inflater.inflate(R.layout.fragment_movie, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        super.onViewCreated(view, savedInstanceState)
+        setViewModel()
+    }
+
+    private fun setViewModel() {
+        binding.viewmodel = movieViewModel
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.laboratorio05.ui.movie
+package com.example.laboratorio05.ui.movie.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,6 +7,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.laboratorio05.MovieReviewerApplication
 import com.example.laboratorio05.data.models.MovieModel
+import com.example.laboratorio05.data.qualification
 import com.example.laboratorio05.repository.MovieRepository
 
 class MovieViewModel(private val repository: MovieRepository): ViewModel() {
@@ -56,6 +57,13 @@ class MovieViewModel(private val repository: MovieRepository): ViewModel() {
         description.value = ""
         calification.value = ""
         status.value = ""
+    }
+
+    fun setSelectedMovie(movie: MovieModel) {
+        name.value = movie.name
+        category.value = movie.Category
+        description.value = movie.description
+        calification.value = movie.qualification
     }
 
     companion object {
